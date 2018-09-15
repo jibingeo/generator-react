@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react';
+import * as React from 'react';
 
 <% if (style) { %>import style from './<%= name %>.css';<% } %>
 
 interface IProps {
 }
 
-class <%= name %> extends PureComponent<IProps> {
+class <%= name %> extends React.PureComponent<IProps> {
   render(){
     return <div <% if (style) { %>className={style.container}<% } %>></div>;
   };
