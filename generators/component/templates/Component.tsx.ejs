@@ -3,11 +3,16 @@ import * as React from 'react';
 <% if (style) { %>import style from './<%= name %>.css';<% } %>
 
 interface IProps {
+  TODO: string
 }
 
-class <%= name %> extends React.PureComponent<IProps> {
+class <%= name %> extends React.Component<IProps> {
   render(){
-    return <div <% if (style) { %>className={style.container}<% } %>></div>;
+    return (
+      <div <% if (style) { %>className={style.container}<% } %>>
+        {'hello component'}
+      </div>
+    );
   };
 };
 
